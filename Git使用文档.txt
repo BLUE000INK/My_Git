@@ -1,35 +1,72 @@
-初始化仓库
-	git init 
-文件添加到仓库
-	git add eg.txt  
-文件提交到本地仓库（可一次提交多个文件）	
-	git commit -m "提交说明"
-本地库分支推送到远程(远程库默认名：origin)
-	git push origin master
-	远程仓库为空时首次推送并建立联系
-		git push -u origin master
-远程库克隆到本地，新建库
-	git clone git@............
-查看仓库当前状态
-	git status
-查看分支
-	git branch
-查看文件状态
-	git diff eg.txt
-查看文件
-	cat eg.txt
-查看日志
-	git log
-	长串字符串为版本号
-	git log --pretty=oneline
-文件版本回退(回退上一版本  head^,上上一版本  head^^,上10版本  head~10)
-	git reset --hard head^	
-	git reset --hard 版本号(可识别即可)
-文件删除
-	本地端删除
-		rm eg.txt
-	版本库删除(输出后也要提交)
-		git rm eg.txt
-版本库替换工作区
-	git checkout
-	
+		初始化仓库
+			git init 
+		文件添加到仓库
+			git add eg.txt  
+		文件提交到本地仓库（可一次提交多个文件）	
+			git commit -m "提交说明"
+		本地库分支推送到远程(远程库默认名：origin)
+			git push origin master
+			远程仓库为空时首次推送并建立联系
+				git push -u origin master
+		远程库克隆到本地，新建库
+			git clone git@............
+		查看仓库当前状态
+			git status
+		查看远程库
+			git remote
+			git remote -v  (详细信息)
+		查看文件状态
+			git diff eg.txt
+		查看文件
+			cat eg.txt
+		查看日志
+			git log
+			长串字符串为版本号
+			git log --pretty=oneline
+		文件版本回退(回退上一版本  head^,上上一版本  head^^,上10版本  head~10)
+			git reset --hard head^	
+			git reset --hard 版本号(可识别即可)
+		文件删除
+			本地端删除
+				rm eg.txt
+			版本库删除(输出后也要提交)
+				git rm eg.txt
+		版本库替换工作区
+			git checkout
+分支管理(主分支master)
+	查看分支
+		git branch
+	创建分支
+		git branch xxx
+	切换分支
+		git checkout xxx
+		git switch xxx
+	创建并切换分支
+		git checkout -b xxx
+		git switch -c xxx
+	合并到当前分支
+		git merge xxx
+	删除分支
+		git branch -d xxx
+	查看分支图谱	
+		git log --graph
+	推送某条分支到远程仓库
+		git push origin xxx
+
+标签管理
+	当前分支下打标签
+		git tag xxx
+	查看所有标签
+		git tag
+	查看标签信息
+		git show xxx
+	创建带说明的标签
+		git tag -a xxx -m "xxxxxx"
+	删除标签
+		git tag -d xxx
+	推送标签到远程仓库
+		git push origin --tags
+	删除远程仓库标签
+		1.本地删除
+		2.远程删除
+			git push origin :refs/tags/xxx
