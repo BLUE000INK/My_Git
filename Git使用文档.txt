@@ -1,27 +1,33 @@
 初始化仓库
-	$git init 
+	git init 
 文件添加到仓库
-	$git add eg.txt  
+	git add eg.txt  
 文件提交到本地仓库（可一次提交多个文件）	
-	$git commit -m "提交说明"
-文件提交到远程仓库
-	$git push
+	git commit -m "提交说明"
+本地库分支推送到远程(远程库默认名：origin)
+	git push origin master
+	远程仓库为空时首次推送并建立联系
+		git push -u origin master
 查看仓库当前状态
-	$git status
+	git status
+查看分支
+	git branch
 查看文件状态
-	$git diff eg.txt
+	git diff eg.txt
 查看文件
-	$cat eg.txt
+	cat eg.txt
 查看日志
-	$git log
+	git log
 	长串字符串为版本号
-	$git log --pretty=oneline
+	git log --pretty=oneline
 文件版本回退(回退上一版本  head^,上上一版本  head^^,上10版本  head~10)
-	$git reset --hard head^	
-	$git reset --hard 版本号(可识别即可)
+	git reset --hard head^	
+	git reset --hard 版本号(可识别即可)
 文件删除
 	本地端删除
 		rm eg.txt
-	git端删除(输出后也要提交)
+	版本库删除(输出后也要提交)
 		git rm eg.txt
+版本库替换工作区
+	git checkout
 	
