@@ -8,6 +8,8 @@
 	git push origin master
 	远程仓库为空时首次推送并建立联系
 		git push -u origin master
+远程库克隆到本地，新建库
+	git clone git@............
 查看仓库当前状态
 	git status
 查看分支
