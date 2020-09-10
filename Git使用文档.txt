@@ -2,8 +2,10 @@
 	$git init 
 文件添加到仓库
 	$git add eg.txt  
-文件提交到仓库（可一次提交多个文件）	
+文件提交到本地仓库（可一次提交多个文件）	
 	$git commit -m "提交说明"
+文件提交到远程仓库
+	$git push
 查看仓库当前状态
 	$git status
 查看文件状态
